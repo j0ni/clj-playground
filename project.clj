@@ -7,7 +7,8 @@
                  [com.novemberain/monger "1.1.2"]
                  [clj-time "0.4.3"]
                  [compojure "1.1.1"]
-                 [clj-http "0.5.3"]]
+                 [clj-http "0.5.3"]
+                 [org.clojure/data.json "0.1.3"]]
   :profiles {:dev {:plugins [[lein-ring "0.7.3"]]}}
   :main clj-playground.core
   :ring {:handler clj-playground.core/ring-handler})
