@@ -8,7 +8,9 @@
              [collection :as mc]
              [query :as mq])
             (clj-http
-             [client :as http])))
+             [client :as http])
+            (clojure
+             [xml :as xml])))
 
 (defn -main
   "I boot the world!"
@@ -27,4 +29,5 @@
   (format/unparse (format/formatters :date-time) (time/now)))
 
 (defn get-point-forecast [lat lng]
-  (http/get (format-query lat lng (now-str))))
+  (xml/parse (format-query lat lng (now-str))))
+
