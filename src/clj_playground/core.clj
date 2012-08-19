@@ -7,9 +7,9 @@
             (monger
              [core :as mg]
              [collection :as mc]
-             [query :as mq])
-            (clj-http
-             [client :as http])
+             [query :as mq]
+             ;; include monger.json to activate ObjectId serialization
+             json)
             (clojure
              [xml :as xml])
             (compojure
